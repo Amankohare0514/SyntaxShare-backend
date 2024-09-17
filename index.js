@@ -10,6 +10,9 @@ app.use(express.json());
 app.get("/" , (req , res)=>{
     res.send("helo this is aman")
 })
+app.get('/ping', (req, res) => {
+    res.send('PONG')
+});
 app.use('/api', router);
 
 // Connect to MongoDB
