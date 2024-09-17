@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 
 // Use the user router with a base route
+app.get("/" , (req , res)=>{
+    res.send("helo this is aman")
+})
 app.use('/api', router);
 
 // Connect to MongoDB
