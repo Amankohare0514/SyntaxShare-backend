@@ -16,12 +16,10 @@ app.get('/ping', (req, res) => {
 app.use('/api', router);
 
 // Connect to MongoDB
-mongoose.connect( process.env.MONGO_URL , {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+mongoose.connect('mongodb+srv://amankohare:amankohare1234@cluster0.jw6km.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {})
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.error('Connection error:', err));
+
 
 // Start the server
 const PORT = process.env.PORT || 8000
