@@ -7,8 +7,9 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'https://syntax-share-frontend.vercel.app/'
-  }));
+    origin: 'https://syntax-share-frontend.vercel.app'
+}));
+
   
 app.use(express.json());
 
